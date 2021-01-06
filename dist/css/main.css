@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  font-size: 12px;
+  font-family: "Kumbh sans", sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 330px;
+  height: 490px;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: #fff;
+  /* checkbox for showing answers*/
+  /* arrow animtion*/
+  /* changing question text color  */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-53%);
+          transform: translateX(-53%);
+  background-image: url("/dist/images/illustration-woman-online-mobile.svg");
+  width: 266px;
+  height: 196px;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 60%;
+  -webkit-transform: translateX(-62%);
+          transform: translateX(-62%);
+  background-image: url("/dist/images/bg-pattern-mobile.svg");
+  width: 240px;
+  height: 104px;
+}
+
+.card h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.card .questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.card #question-one:checked + label .answer-one,
+.card #question-two:checked + label .answer-two,
+.card #question-three:checked + label .answer-three,
+.card #question-four:checked + label .answer-four,
+.card #question-five:checked + label .answer-five {
+  visibility: visible;
+  height: auto;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.card #question-one:checked + label::before,
+.card #question-two:checked + label::before,
+.card #question-three:checked + label::before,
+.card #question-four:checked + label::before,
+.card #question-five:checked + label::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card h4 {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  color: #4a4b5e;
+  font-weight: 400;
+}
+
+.card h4:hover {
+  color: #f47c57;
+}
+
+.card #question-one:checked + label h4,
+.card #question-two:checked + label h4,
+.card #question-three:checked + label h4,
+.card #question-four:checked + label h4,
+.card #question-five:checked + label h4 {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.card .answer {
+  visibility: hidden;
+  height: 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  padding: 5px 20px 0 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  color: #787887;
+}
+
+.card input[type="checkbox"] {
+  display: none;
+}
+
+.card label {
+  position: relative;
+  padding: 0px 10px 10px 0;
+  border-bottom: 1px solid #e7e7e9;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.card label::before {
+  content: "";
+  display: inline-block;
+  background: url("/dist/images/icon-arrow-down.svg");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 10px;
+  height: 7px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+/*# sourceMappingURL=main.css.map */
