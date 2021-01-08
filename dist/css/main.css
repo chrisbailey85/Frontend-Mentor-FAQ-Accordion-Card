@@ -187,8 +187,10 @@ body {
   .box-image-desktop-only {
     display: block;
     position: absolute;
-    top: 335px;
-    left: -45px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-430px, -20px);
+            transform: translate(-430px, -20px);
     background-image: url("../images/illustration-box-desktop.svg");
     background-repeat: no-repeat;
     width: 191px;
@@ -257,10 +259,10 @@ body {
 
 @media (min-width: 1024px) {
   .box-image-desktop-only {
-    top: 320px;
-    left: 20px;
-    background-repeat: no-repeat;
-    z-index: 100;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-490px, -20px);
+            transform: translate(-490px, -20px);
   }
   .card {
     width: 800px;
@@ -288,10 +290,10 @@ body {
 
 @media (min-width: 1440px) {
   .box-image-desktop-only {
-    top: 320px;
-    left: 175px;
-    background-repeat: no-repeat;
-    z-index: 100;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-540px, -20px);
+            transform: translate(-540px, -20px);
   }
   .card {
     width: 900px;
