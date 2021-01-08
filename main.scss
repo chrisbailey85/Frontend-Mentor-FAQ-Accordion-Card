@@ -212,16 +212,16 @@ body {
     left: 50%;
     transform: translate(-490px, -20px);
   }
-  h2 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 14px;
-  }
   .card {
     width: 800px;
     height: 480px;
 
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
     &::before {
       top: 50%;
       left: -90px;
