@@ -264,6 +264,12 @@ body {
     -webkit-transform: translate(-490px, -20px);
             transform: translate(-490px, -20px);
   }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
   .card {
     width: 800px;
     height: 480px;
