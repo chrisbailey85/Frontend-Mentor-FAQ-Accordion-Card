@@ -65,23 +65,23 @@ body {
     height: 100%;
   }
 
-  /* checkbox for showing answers*/
-
   #question-one:checked + label .answer-one,
   #question-two:checked + label .answer-two,
   #question-three:checked + label .answer-three,
   #question-four:checked + label .answer-four,
   #question-five:checked + label .answer-five {
+    /* checkbox for showing answers*/
     visibility: visible;
     height: auto;
     transform: scale(1, 1);
   }
-  /* arrow animtion*/
+
   #question-one:checked + label::before,
   #question-two:checked + label::before,
   #question-three:checked + label::before,
   #question-four:checked + label::before,
   #question-five:checked + label::before {
+    /* arrow animtion*/
     transform: rotate(180deg);
   }
 
@@ -95,12 +95,13 @@ body {
       color: $text-hover;
     }
   }
-  /* changing question text color  */
+
   #question-one:checked + label h2,
   #question-two:checked + label h2,
   #question-three:checked + label h2,
   #question-four:checked + label h2,
   #question-five:checked + label h2 {
+    /* changing question text color  */
     color: $text-question-active-color;
     font-weight: 700;
   }
