@@ -18,7 +18,6 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
   font-size: 12px;
-  font-family: "Kumbh sans", sans-serif;
 }
 
 .box-image-desktop-only {
@@ -36,6 +35,9 @@ body {
   height: 490px;
   background-color: #fff;
   padding: 10px;
+  -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Kumbh sans", sans-serif;
   /* checkbox for showing answers*/
   /* arrow animtion*/
   /* changing question text color  */
@@ -108,23 +110,24 @@ body {
           transform: rotate(180deg);
 }
 
-.card h4 {
+.card h2 {
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease;
   color: #4a4b5e;
   font-weight: 400;
   padding: 5px 0;
+  font-size: 14px;
 }
 
-.card h4:hover {
+.card h2:hover {
   color: #f47c57;
 }
 
-.card #question-one:checked + label h4,
-.card #question-two:checked + label h4,
-.card #question-three:checked + label h4,
-.card #question-four:checked + label h4,
-.card #question-five:checked + label h4 {
+.card #question-one:checked + label h2,
+.card #question-two:checked + label h2,
+.card #question-three:checked + label h2,
+.card #question-four:checked + label h2,
+.card #question-five:checked + label h2 {
   color: #1d1e35;
   font-weight: 700;
 }
@@ -184,8 +187,8 @@ body {
   .box-image-desktop-only {
     display: block;
     position: absolute;
-    top: 360px;
-    left: -30px;
+    top: 335px;
+    left: -45px;
     background-image: url("../images/illustration-box-desktop.svg");
     background-repeat: no-repeat;
     width: 191px;
@@ -193,18 +196,22 @@ body {
     z-index: 100;
   }
   .card {
-    width: 690px;
+    width: 680px;
     height: 420px;
     overflow: hidden;
   }
   .card h1 {
-    margin-top: 50px;
+    margin: 25px 0 15px 0;
     font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .card h2 {
+    font-size: 12px;
   }
   .card::before {
     position: absolute;
     top: 50%;
-    left: -120px;
+    left: -114px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     background-image: url("../images/illustration-woman-online-desktop.svg");
@@ -214,7 +221,7 @@ body {
   .card::after {
     content: "";
     position: absolute;
-    top: -350px;
+    top: -345px;
     left: -610px;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
@@ -242,9 +249,56 @@ body {
     float: right;
     height: 100%;
     width: 50%;
-    padding: 0 12px 60px 15px;
+    padding: 0 15px 60px 30px;
     z-index: 10;
     cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box-image-desktop-only {
+    top: 320px;
+    left: 20px;
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+  .card {
+    width: 800px;
+    height: 480px;
+  }
+  .card::before {
+    top: 50%;
+    left: -90px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .card::after {
+    top: -300px;
+    left: -580px;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .card h1 {
+    margin: 45px 0 15px 0;
+  }
+  .card .questions {
+    padding: 0 25px 60px 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .box-image-desktop-only {
+    top: 320px;
+    left: 175px;
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+  .card {
+    width: 900px;
+    height: 480px;
+  }
+  .card .questions {
+    padding: 0 60px 60px 25px;
   }
 }
 /*# sourceMappingURL=main.css.map */
