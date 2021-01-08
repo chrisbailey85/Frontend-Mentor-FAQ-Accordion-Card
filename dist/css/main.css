@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -15,13 +15,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#af67e9),
-    to(#6565e7)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
   font-size: 12px;
 }
@@ -36,13 +30,13 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 320px;
   height: 490px;
   background-color: #fff;
   padding: 10px;
   -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
   font-family: "Kumbh sans", sans-serif;
 }
 
@@ -52,7 +46,7 @@ body {
   top: -80px;
   left: 50%;
   -webkit-transform: translateX(-53%);
-  transform: translateX(-53%);
+          transform: translateX(-53%);
   background-image: url("../images/illustration-woman-online-mobile.svg");
   width: 266px;
   height: 196px;
@@ -64,7 +58,7 @@ body {
   top: 20px;
   left: 60%;
   -webkit-transform: translateX(-62%);
-  transform: translateX(-62%);
+          transform: translateX(-62%);
   background-image: url("../images/bg-pattern-mobile.svg");
   width: 240px;
   height: 104px;
@@ -82,92 +76,29 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
-.card #question-one:checked + label .answer-one,
-.card #question-two:checked + label .answer-two,
-.card #question-three:checked + label .answer-three,
-.card #question-four:checked + label .answer-four,
-.card #question-five:checked + label .answer-five {
-  /* checkbox for showing answers*/
-  visibility: visible;
-  height: auto;
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-.card #question-one:checked + label::before,
-.card #question-two:checked + label::before,
-.card #question-three:checked + label::before,
-.card #question-four:checked + label::before,
-.card #question-five:checked + label::before {
-  /* arrow animtion*/
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.card h2 {
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
-  color: #4a4b5e;
-  font-weight: 400;
-  padding: 5px 0;
-  font-size: 14px;
-}
-
-.card h2:hover {
-  color: #f47c57;
-}
-
-.card #question-one:checked + label h2,
-.card #question-two:checked + label h2,
-.card #question-three:checked + label h2,
-.card #question-four:checked + label h2,
-.card #question-five:checked + label h2 {
-  /* changing question text color  */
-  color: #1d1e35;
-  font-weight: 700;
-}
-
-.card .answer {
-  visibility: hidden;
-  height: 0;
-  -webkit-transform: scale(1, 0);
-  transform: scale(1, 0);
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  padding: 5px 20px 0 0;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  color: #787887;
-}
-
-.card input[type="checkbox"] {
-  display: none;
-}
-
 .card label {
+  display: inline-block;
   position: relative;
-  padding: 0px 10px 10px 0;
-  border-bottom: 1px solid #e7e7e9;
+  padding: 5px 10px 10px 0;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e9;
 }
 
 .card label::before {
   content: "";
-  display: inline-block;
   background: url("../images/icon-arrow-down.svg");
   position: absolute;
   top: 5px;
@@ -178,6 +109,59 @@ body {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+#question-one:checked ~ .answer-one,
+#question-two:checked ~ .answer-two,
+#question-three:checked ~ .answer-three,
+#question-four:checked ~ .answer-four,
+#question-five:checked ~ .answer-five {
+  /* checkbox for showing answers*/
+  visibility: visible;
+  height: auto;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+#question-one:checked + label::before,
+#question-two:checked + label::before,
+#question-three:checked + label::before,
+#question-four:checked + label::before,
+#question-five:checked + label::before {
+  /* arrow animtion*/
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#question-one:checked + label,
+#question-two:checked + label,
+#question-three:checked + label,
+#question-four:checked + label,
+#question-five:checked + label {
+  /* changing question text color  */
+  color: #1d1e35;
+  font-weight: 700;
+  border: none;
+}
+
+.answer {
+  visibility: hidden;
+  height: 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  padding: 2.5px 20px 2.5px 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  color: #787887;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 .attribution {
@@ -196,7 +180,7 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-430px, -20px);
-    transform: translate(-430px, -20px);
+            transform: translate(-430px, -20px);
     background-image: url("../images/illustration-box-desktop.svg");
     background-repeat: no-repeat;
     width: 191px;
@@ -213,7 +197,7 @@ body {
     font-weight: 700;
     font-size: 1.8rem;
   }
-  .card h2 {
+  .card label {
     font-size: 12px;
   }
   .card::before {
@@ -221,7 +205,7 @@ body {
     top: 50%;
     left: -114px;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
     background-image: url("../images/illustration-woman-online-desktop.svg");
     width: 472px;
     height: 359px;
@@ -232,7 +216,7 @@ body {
     top: -345px;
     left: -610px;
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+            transform: translateX(0%);
     background-image: url("../images/bg-pattern-desktop.svg");
     width: 966px;
     height: 945px;
@@ -246,14 +230,14 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     float: right;
     height: 100%;
     width: 50%;
@@ -268,13 +252,13 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-490px, -20px);
-    transform: translate(-490px, -20px);
+            transform: translate(-490px, -20px);
   }
   .card {
     width: 800px;
     height: 480px;
   }
-  .card h2 {
+  .card label {
     font-size: 16px;
   }
   .card p {
@@ -284,13 +268,13 @@ body {
     top: 50%;
     left: -90px;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .card::after {
     top: -300px;
     left: -580px;
     -webkit-transform: translateX(0%);
-    transform: translateX(0%);
+            transform: translateX(0%);
   }
   .card h1 {
     margin: 45px 0 15px 0;
@@ -305,7 +289,7 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-540px, -20px);
-    transform: translate(-540px, -20px);
+            transform: translate(-540px, -20px);
   }
   .card {
     width: 900px;

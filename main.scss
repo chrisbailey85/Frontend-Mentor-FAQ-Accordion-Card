@@ -64,68 +64,15 @@ body {
     align-items: center;
     height: 100%;
   }
-
-  #question-one:checked + label .answer-one,
-  #question-two:checked + label .answer-two,
-  #question-three:checked + label .answer-three,
-  #question-four:checked + label .answer-four,
-  #question-five:checked + label .answer-five {
-    /* checkbox for showing answers*/
-    visibility: visible;
-    height: auto;
-    transform: scale(1, 1);
-  }
-
-  #question-one:checked + label::before,
-  #question-two:checked + label::before,
-  #question-three:checked + label::before,
-  #question-four:checked + label::before,
-  #question-five:checked + label::before {
-    /* arrow animtion*/
-    transform: rotate(180deg);
-  }
-
-  h2 {
-    transition: color 0.5s ease;
-    color: $text-question-min-color;
-    font-weight: 400;
-    padding: 5px 0;
-    font-size: 14px;
-    &:hover {
-      color: $text-hover;
-    }
-  }
-
-  #question-one:checked + label h2,
-  #question-two:checked + label h2,
-  #question-three:checked + label h2,
-  #question-four:checked + label h2,
-  #question-five:checked + label h2 {
-    /* changing question text color  */
-    color: $text-question-active-color;
-    font-weight: 700;
-  }
-
-  .answer {
-    visibility: hidden;
-    height: 0;
-    transform: scale(1, 0);
-    transform-origin: top;
-    padding: 5px 20px 0 0;
-    transition: transform 0.5s ease-in-out;
-    color: $text-light-color;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
   label {
+    display: inline-block;
     position: relative;
-    padding: 0px 10px 10px 0;
-    border-bottom: 1px solid $border-color;
+    padding: 5px 10px 10px 0;
     transition: color 0.3s ease;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
     &::before {
       content: "";
-      display: inline-block;
       background: url("../images/icon-arrow-down.svg");
       position: absolute;
       top: 5px;
@@ -136,6 +83,52 @@ body {
     }
   }
 }
+
+#question-one:checked ~ .answer-one,
+#question-two:checked ~ .answer-two,
+#question-three:checked ~ .answer-three,
+#question-four:checked ~ .answer-four,
+#question-five:checked ~ .answer-five {
+  /* checkbox for showing answers*/
+  visibility: visible;
+  height: auto;
+  transform: scale(1, 1);
+}
+
+#question-one:checked + label::before,
+#question-two:checked + label::before,
+#question-three:checked + label::before,
+#question-four:checked + label::before,
+#question-five:checked + label::before {
+  /* arrow animtion*/
+  transform: rotate(180deg);
+}
+
+#question-one:checked + label,
+#question-two:checked + label,
+#question-three:checked + label,
+#question-four:checked + label,
+#question-five:checked + label {
+  /* changing question text color  */
+  color: $text-question-active-color;
+  font-weight: 700;
+  border: none;
+}
+
+.answer {
+  visibility: hidden;
+  height: 0;
+  transform: scale(1, 0);
+  transform-origin: top;
+  padding: 2.5px 20px 2.5px 0;
+  transition: transform 0.5s ease-in-out;
+  color: $text-light-color;
+  border-bottom: 1px solid $border-color;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
 .attribution {
   position: absolute;
   bottom: 0;
@@ -167,7 +160,7 @@ body {
       font-weight: 700;
       font-size: 1.8rem;
     }
-    h2 {
+    label {
       font-size: 12px;
     }
     &::before {
@@ -217,7 +210,7 @@ body {
     width: 800px;
     height: 480px;
 
-    h2 {
+    label {
       font-size: 16px;
     }
     p {
