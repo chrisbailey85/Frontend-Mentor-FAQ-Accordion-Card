@@ -171,6 +171,7 @@ input[type="checkbox"] {
       background-image: url("../images/illustration-woman-online-desktop.svg");
       width: 472px;
       height: 359px;
+      z-index: 10;
     }
 
     &::after {
